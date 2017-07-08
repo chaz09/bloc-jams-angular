@@ -133,12 +133,16 @@
                 if (currentBuzzObject) {
                     currentBuzzObject.setTime(time);
                 }
-            };
+           
+
+
+
 
             angular
                 .module('blocJams')
                 .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
 
-        })();
-    }
-
+})();
+    
+/**<volume-control="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.duration }}"></seek-bar>
+ 
