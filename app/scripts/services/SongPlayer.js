@@ -31,6 +31,16 @@
          * @param {Object} song
          */
 
+
+        SongPlayer.volume = function(song) {
+            if (currentBuzzObject) {
+                SongPlayer.setVolume()
+            }
+         };
+
+
+
+
         var setSong = function(song) {
             if (currentBuzzObject) {
                 currentBuzzObject.stop();
@@ -143,6 +153,5 @@
                 .factory('SongPlayer', ['$rootScope', 'Fixtures', SongPlayer]);
 
 })();
-    
-/**<volume-control="{{ playerBar.songPlayer.currentTime }}" max="{{ playerBar.songPlayer.currentSong.duration }}"></seek-bar>
- 
+    onchange is an event handler. it executes some JavaScript code or function when its value has been modified
+
